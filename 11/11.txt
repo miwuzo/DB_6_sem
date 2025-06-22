@@ -1,0 +1,13 @@
+echo "SELECT * FROM SHIPMENTTABLE22;" | sqlplus -s sys/booble34@localhost:1521/ORCLCDB AS SYSDBA
+
+
+
+
+
+
+echo "TRUNCATE TABLE SHIPMENTTABLE22 DROP STORAGE;" | sqlplus -s sys/booble34@localhost:1521/ORCLCDB AS SYSDBA
+
+
+
+
+sqlldr userid=\"sys/booble34@localhost:1521/ORCLCDB AS SYSDBA\" control=config.ctl log=shipments_import.log
